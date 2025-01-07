@@ -1,0 +1,37 @@
+---
+import "../style/global.css";
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{Astro.props.title}</title>
+
+    <!-- meta og -->
+    <meta property="og:title" content={Astro.props.title} />
+    <meta property="og:image" content="meta-image.png" />
+    <meta property="og:decription" content={Astro.props.desc} />
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={Astro.props.title} />
+    <meta name="twitter:image" content="meta-image.png" />
+
+    <meta name="description" content={Astro.props.desc} />
+    <meta name="author" content="Dai rewahandi" />
+    <meta name="keywords" content="Astro, TailwindCSS, portofolio" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=2" />
+  </head>
+  <body class="prose p-4 w-screen min-h-screen md:px-24">
+    <slot />
+  </body>
+</html>
+
+<style>
+  .prose {
+    max-width: 100vw !important;
+    font-size: 1.2rem !important;
+  }
+</style>
